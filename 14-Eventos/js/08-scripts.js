@@ -37,4 +37,16 @@ contenedorCard.appendChild(info);
 
 // Insertarlo en el HTML...
 const contenedor = document.querySelector('.hacer .contenedor-cards');
+contenedor.appendChild(contenedorCard);
 contenedor.appendChild(contenedorCard); // al inicio info
+
+
+//añadir elementos dando click
+let contenedorCard2 = document.querySelector('.hacer .contenedor-cards');
+contenedor.onclick = () => {
+    const nuevoElemento = document.createElement('div');
+    nuevoElemento.classList.add('info');
+    nuevoElemento.innerHTML = `<img src='img/hacer2.jpg'><h3>nuevo alojamiento</h3>`;
+    console.log('nuevo elemento creado');
+    contenedor.appendChild(nuevoElemento);
+}
